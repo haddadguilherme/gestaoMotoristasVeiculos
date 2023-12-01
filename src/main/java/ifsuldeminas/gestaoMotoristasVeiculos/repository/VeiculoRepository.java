@@ -5,12 +5,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface VeiculoRepository extends JpaRepository<Veiculo, Long> {
 
-    Veiculo findByPlaca(String placa);
-    Veiculo findByFrota(String frota);
+    Optional<Veiculo> findByPlaca(String placa);
+    Optional<Veiculo> findByFrota(String frota);
 
     List<Veiculo> findByDisponivel(String disponivel);
 
