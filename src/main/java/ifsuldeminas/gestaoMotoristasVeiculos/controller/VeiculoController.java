@@ -3,7 +3,6 @@ package ifsuldeminas.gestaoMotoristasVeiculos.controller;
 import ifsuldeminas.gestaoMotoristasVeiculos.model.entity.Veiculo;
 import ifsuldeminas.gestaoMotoristasVeiculos.service.VeiculoService;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.enums.ParameterIn;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

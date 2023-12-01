@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import ifsuldeminas.gestaoMotoristasVeiculos.model.entity.Motorista;
 import ifsuldeminas.gestaoMotoristasVeiculos.service.MotoristaService;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.enums.ParameterIn;
 
 import java.util.List;
 import java.util.Optional;
