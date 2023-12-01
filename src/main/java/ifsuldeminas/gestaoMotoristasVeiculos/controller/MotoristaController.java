@@ -13,5 +13,11 @@ public class MotoristaController {
     public String index() {
         return "Hello World!";
     }
+
+    @GetMapping("/motoristas/cpf/{cpf}")
+    @Operation(summary = "Busca motorista por um CPF passado por parâmetro.", method = "GET")
+    public String motoristaCpf(String cpf) {
+        return "Hello World!";
+    }
     
 }
