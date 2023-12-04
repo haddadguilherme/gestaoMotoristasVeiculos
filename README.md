@@ -11,9 +11,11 @@ Para o desenvolvimento da aplicação, foram utilizadas às tecnologias e libs a
 | Spring Boot              | 2.7.17         |
 | MySQL                    | Latest         | 
 | 
+
 ##Pré requisitos de tecnologia
 - Instalar o _**Java 17**_<br>
 - Instalar o _**Gradle 3.5 ou 4.1**_
+
 ##Build
 - Fazer o build da aplicação através do comando `gradle build`(_**Necessário ter o gradle instalado**_).
 
