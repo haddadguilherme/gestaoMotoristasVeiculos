@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 
 
 import java.time.LocalDate;
+import java.util.Optional;
 
 @Component
 public class DataSeeder {
@@ -36,11 +37,13 @@ public class DataSeeder {
         motorista2.setCategoria("A");
         motorista2.setValidade(LocalDate.now().plusYears(2));
 
-        if (motoristaRepository.findByCpf(motorista1.getCpf()) == null) {
+        Optional<Motorista> motoristaOptional1 = motoristaRepository.findByCpf(motorista1.getCpf());
+        if (motoristaOptional1.isEmpty()) {
             motoristaRepository.save(motorista1);
         }
 
-        if (motoristaRepository.findByCpf(motorista2.getCpf()) == null) {
+        Optional<Motorista> motoristaOptional2 = motoristaRepository.findByCpf(motorista2.getCpf());
+        if (motoristaOptional2.isEmpty()) {
             motoristaRepository.save(motorista2);
         }
 
@@ -55,11 +58,13 @@ public class DataSeeder {
         veiculo2.setFrota("1001");
         veiculo2.setDisponivel("S");
 
-        if (veiculoRepository.findByPlaca(veiculo1.getPlaca()) == null) {
+        Optional<Veiculo> veiculoOptional1 = veiculoRepository.findByPlaca(veiculo1.getPlaca());
+        if (veiculoOptional1.isEmpty()) {
             veiculoRepository.save(veiculo1);
         }
 
-        if (veiculoRepository.findByPlaca(veiculo2.getPlaca()) == null) {
+        Optional<Veiculo> veiculoOptional2 = veiculoRepository.findByPlaca(veiculo2.getPlaca());
+        if (veiculoOptional2.isEmpty()) {
             veiculoRepository.save(veiculo2);
         }
 
