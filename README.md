@@ -8,20 +8,18 @@ Para o desenvolvimento da aplicação, foram utilizadas às tecnologias e libs a
 |:-------------------------|:---------------|
 | Java                     | JDK 17         |
 | Gradle                   |                |
-| Spring Boot              | 2.7.6          |
-| MySQL                    | 8.0            | 
+| Spring Boot              | 2.7.17         |
+| MySQL                    | Latest         | 
 | 
 ##Pré requisitos de tecnologia
-- Instalar o _**Java 17**_, por ventura se estiver a utilizar Linux ou Mac pode utilizar o
-  <br>[SDK Man](https://sdkman.io/) para fazer a gestão de versões do _**Java**_;</br>
-- Instalar o _**Gradle 3.5 ou 4.1**_, por ventura se estiver a utilizar Linux ou Mac pode utilizar o
-  <br>[SDK Man](https://sdkman.io/) para fazer a gestão de versões do _**Gradle**_;</br>
-
+- Instalar o _**Java 17**_<br>
+- Instalar o _**Gradle 3.5 ou 4.1**_
 ##Build
-- Fazer o build da aplicação através do comando `build gradle`(_**Necessário ter o gradle instalado**_) ou`./gradlew build`(Busca a partir do arquivo [gradle-wrapper.properties](gradle/wrapper/gradle-wrapper.properties)).
+- Fazer o build da aplicação através do comando `gradle build`(_**Necessário ter o gradle instalado**_).
 
 ##Execução
-- Executar a aplicação através do comando `java -jar build/libs/documents.jar `;
+- Execute o comando `docker compose` para criação do banco de dados com a configuração correta
+- Fazer a execução da aplicação através do comando `gradle bootrun`
 - Pontos a serem observados no processo de execução são:
     - Execução na porta _**8080**_;
     - Acesso através do swagger-ui = (http://localhost:8080/swagger-ui/index.html)
