@@ -30,7 +30,7 @@ public class VeiculoController {
     }
 
     // Post methods
-    @PostMapping("/create")
+    @PostMapping("/criar")
     @Operation(summary = "Criar um novo veículo", method = "POST")
     public ResponseEntity<Veiculo> criarVeiculo(@RequestBody Veiculo novoVeiculo) {
         Veiculo veiculoCriado = veiculoService.criarVeiculo(novoVeiculo);
@@ -38,7 +38,7 @@ public class VeiculoController {
     }
 
     // Delete methods
-    @DeleteMapping("/delete/{placa}")
+    @DeleteMapping("/deletar/{placa}")
     @Operation(summary = "Excluir um veículo pela placa", method = "DELETE")
     public ResponseEntity<String> excluirVeiculo(@PathVariable String placa) {
         boolean exclusaoSucesso = veiculoService.excluirVeiculoPorPlaca(placa);

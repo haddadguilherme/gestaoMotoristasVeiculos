@@ -30,7 +30,7 @@ public class AlocacaoController {
     }
 
     // Post methods
-    @PostMapping("/do")
+    @PostMapping("/alocar")
     @Operation(summary = "Alocar um veículo para um motorista.", method = "POST")
     public ResponseEntity<String> alocarVeiculo(@RequestBody AlocacaoRequest alocacaoRequest) {
 
@@ -46,7 +46,7 @@ public class AlocacaoController {
         }
     }
 
-    @PostMapping("/undo/{id}")
+    @PostMapping("/desalocar/{id}")
     @Operation(summary = "Desalocar o veículo e motorista e tornar disponível.", method = "POST")
     public ResponseEntity<String> desalocarVeiculo(@PathVariable Long id) {
         boolean desalocacaoSucesso = alocacaoService.desalocarVeiculo(id);

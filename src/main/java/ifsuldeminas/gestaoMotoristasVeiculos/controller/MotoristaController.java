@@ -36,14 +36,14 @@ public class MotoristaController {
         return motoristaService.findByCpf(cpf);
     }
 
-    @GetMapping("/list/category/{categoria}")
+    @GetMapping("/listar/categoria/{categoria}")
     @Operation(summary = "Buscar todos os motoristas no sistema que possuem CNH na categoria enviada.", method = "GET")
     public List<Motorista> motoristasCategoriaCnh(String categoria) {
         return motoristaService.getMotoristasCategoriaCnh(categoria);
     }
 
     // Post methods
-    @PostMapping("/create")
+    @PostMapping("/criar")
     @Operation(summary = "Criar um novo motorista.", method = "POST")
     public ResponseEntity<Motorista> criarMotorista(@RequestBody Motorista novoMotorista) {
         Motorista motoristaCriado = motoristaService.criarMotorista(novoMotorista);
@@ -51,7 +51,7 @@ public class MotoristaController {
     }
 
     // Delete methods
-    @DeleteMapping("/delete/cpf/{cpf}")
+    @DeleteMapping("/deletar/cpf/{cpf}")
     @Operation(summary = "Excluir um motorista pelo CPF.", method = "DELETE")
     public ResponseEntity<String> excluirMotorista(@PathVariable String cpf) {
         boolean exclusaoSucesso = motoristaService.excluirMotoristaPorCpf(cpf);
