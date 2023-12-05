@@ -1,4 +1,10 @@
 # Projeto Final Backend - IF Sul de Minas
+
+GitHub : https://github.com/haddadguilherme/gestaoMotoristasVeiculos
+
+Vídeo YouTube : https://youtu.be/QmC9UkNtidA
+
+
 Projeto final para finalizar a disciplina backend do curso de pós-graduação do IF Sul de Minas.
 
 ##Tecnologias
